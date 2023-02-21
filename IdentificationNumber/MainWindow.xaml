@@ -1,0 +1,45 @@
+﻿<Window x:Class="IdentificationNumber.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IdentificationNumber"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closed="Window_Closed">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBlock>Фамилия:</TextBlock>
+            <TextBox x:Name="SurNameTextBox"></TextBox>
+            <TextBlock>Ваш пол:</TextBlock>
+            <WrapPanel>
+             <RadioButton x:Name="ManRadioButton">Мужчина</RadioButton>
+            <RadioButton x:Name="WomanRadioButton">Женщина</RadioButton>
+            </WrapPanel>
+            <WrapPanel>
+            <TextBlock>Дата рождения:</TextBlock>
+            <DatePicker x:Name="BirthdayDatePicker"></DatePicker>
+            </WrapPanel>
+            <TextBlock>Вы резедент румынии?</TextBlock>
+            <WrapPanel>
+                <RadioButton x:Name="YesRadioButton">Да</RadioButton>
+                <RadioButton x:Name="NoRadioButton">Нет</RadioButton>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock>Ваш город:</TextBlock>
+                <ComboBox Width="100" x:Name="CityComboBox">
+                  
+                </ComboBox>
+            </WrapPanel>
+            <Button x:Name="GenerationButton" Click="GenerationButton_Click">Сгенерировать CNP</Button>
+        </StackPanel>
+    </Grid>
+    
+</Window>
